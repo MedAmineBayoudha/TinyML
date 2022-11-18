@@ -103,9 +103,8 @@ void setup()
   input = interpreter->input(0);
   output = interpreter->output(0);
 
-  // Keep track of how many inferences we have performed.
-  inference_count = 0;
-  // put your setup code here, to run once:
+
+
 
 }
 
@@ -147,8 +146,6 @@ void loop()
           // Loop through the output tensor values from the model
   for (int i = 0; i < NUM_GESTURES; i++) 
   {
- //   Serial.print(GESTURES[i]);
- //   Serial.print(": ");
     if( output->data.f[i] > 0.6 )
       {
         Serial.println( GESTURES[i] );

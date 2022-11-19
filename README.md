@@ -42,7 +42,7 @@ This project will follow the following procedures :
 
   We will work mainly with 2 materials:
 
-   1. Arduino Nano BLE 33 which contains an Accelerometer :
+   . Arduino Nano BLE 33 which contains an Accelerometer :
   
   
    ![image](https://user-images.githubusercontent.com/101800565/202809385-bd853fbf-ae1d-48bd-89f6-2a987af54cc7.png)
@@ -83,7 +83,7 @@ DataCollection.
 ![image](https://user-images.githubusercontent.com/101800565/202810830-53b0fa4b-a7ee-4b2f-8ad8-01bb241f4f1a.png)
 
 
-Make sure you have Ax,Ay,Az, on the serial monitor. With the LSM9DS1 in your hand, make a Move upward to signify 'UP'.Make 20-30 Up movement. On the Serial monitor, 
+Make sure you have Ax,Ay,Az, on the serial monitor. With the LSM9DS1 in your hand, make a Move upward to signify 'UPDOWN'.Make 20-30 Up movement. On the Serial monitor, 
 uncheck Autoscrol button and copy the data. Save the data on your pc as UPDOWN.csv.Make a Move to the right 20-30 times too while checking Serial Monitor and copy the data again, but this time save as RIGHTLEFT.csv and Idle.csv on your PC. 
 
 

@@ -8,7 +8,7 @@
 This project is inspired from the great work of billiyz: https://github.com/billiyz/tinyml-on-the-edge and ShawnHymel: https://github.com/ShawnHymel/tinyml-example-anomaly-detection .
 
 
-The main goal of this project is to be able to detect the movement done by the IMU, either UP or RIGHT using Machine learning directly on the arduino Nano BLE 33 microcontroller and send the result of the classification to my Laptop using USART protocol.
+The main goal of this project is to be able to detect the movement done by the IMU, either UPDOWN, RIGHTLEFT or IDLE  using Machine learning directly on the arduino Nano BLE 33 microcontroller and send the result of the classification to my Laptop using UART protocol.
 
 
 This project will follow the following procedures : 
@@ -89,7 +89,7 @@ uncheck Autoscrol button and copy the data. Save the data on your pc as UPDOWN.c
 
 ***-Google colaboratory data upload :***
 
-Open google Colaboratory platorm, Move to Files. Drag and drop your Up.csv and Right.csv files in the sample_data folder. The Google colaboratory provides a Jupyter notebook that allows us to run our TensorFlow training in a web browser.
+Open google Colaboratory platorm, Move to Files. Drag and drop your UPDOWN.csv, RIGHTLEFT.csv and IDLE.csv files in the sample_data folder. The Google colaboratory provides a Jupyter notebook that allows us to run our TensorFlow training in a web browser.
 
 
 ***-Extract Features to be used for the training :***
@@ -97,7 +97,7 @@ To learn how to decide the best features to use for your training to have the be
 
 
 
-For my work, I decided too work with Median absolute deviation(MAD which is a robust measure of how spread out a set of data is. It's the best choice when your data has extremely high or extremely low values and non normality
+For my work, I decided to work with Median absolute deviation(MAD which is a robust measure of how spread out a set of data is. It's the best choice when your data has extremely high or extremely low values and non normality
 
 
 ![image](https://user-images.githubusercontent.com/101800565/202811488-5e6d35be-ed2e-4f28-a881-b7cbe850290e.png)
@@ -117,7 +117,7 @@ If you open the model.h file, it will look like the one below :
 
 
 ***-Inference in Arduino Nano BLE 33 :***
-Open accelerometer and gyroscope clasifier sketch on this repository named as Inference.ino. On the far top right, click on the drop down button and click New Tab. Name the file as model.h when you save it. Open the downloaded model.h file on your favourite editor and copy the content. Paste in your new model.h file you created alongside the classifier sketch and save.
+Open accelerometer clasifier sketch on this repository named as Inference.ino. On the far top right, click on the drop down button and click New Tab. Name the file as model.h when you save it. Open the downloaded model.h file on your favourite editor and copy the content. Paste in your new model.h file you created alongside the classifier sketch and save.
 To calculate the Median absolute deviation a C code was written by ShawnHymel and you may find it as utils.h and utils.c You also need to add it to your arduino project.
 
 
